@@ -352,16 +352,99 @@ h2 {
 
 /* About Section */
 .about {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background: linear-gradient(135deg, #f8fafc 0%, #F7F4F4 100%);
 }
 
-.about .container p {
-    max-width: 800px;
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
+}
+
+.about h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 2rem;
     text-align: center;
-    font-size: 1.1rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.about-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.about-image-placeholder {
+    aspect-ratio: 1 / 1.2;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.about-image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(126, 31, 43, 0.03), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.placeholder-icon {
+    width: 80px;
+    height: 80px;
+    color: #94a3b8;
+    z-index: 1;
+}
+
+.about-text p {
+    font-size: 1.05rem;
     color: #475569;
     line-height: 1.8;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.about-features {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.about-features .feature-item {
+    font-size: 0.9rem;
+    color: #64748b;
+    background: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 /* How I Work Section */
@@ -1340,6 +1423,31 @@ footer {
     .feature-item {
         font-size: 0.9rem;
         padding: 0.5rem 1rem;
+    }
+
+    /* About Section Responsive */
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-image-wrapper {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-text p {
+        text-align: left;
+    }
+
+    .about-features {
+        justify-content: center;
     }
 
     /* Text overflow prevention */
