@@ -40,7 +40,9 @@ ul{padding:0;margin:0;list-style:none}
 h1{font-size:clamp(3.4rem,6.2vw,5.65rem);line-height:1.04;margin:24px 0 28px}
 .hero-description{max-width:460px;color:var(--muted);font-size:1.0625rem;line-height:1.85}
 .hero-actions{display:flex;align-items:center;gap:23px;flex-wrap:wrap;margin-top:32px}
-.hero-signature{display:flex;align-items:center;gap:13px;margin-top:34px}
+.hero-price-link{display:inline-block;margin-top:18px;max-width:100%;color:var(--wine);font-size:.875rem;line-height:1.8;text-underline-offset:4px}
+.hero-price-link:hover{text-decoration:underline}
+.hero-signature{display:flex;align-items:center;gap:13px;margin-top:26px}
 .initial{display:grid;place-items:center;width:42px;height:42px;border:1px solid #d3b9ae;border-radius:50%;background:#eee2d6;font-family:var(--serif);font-style:italic;font-size:1.4rem;color:var(--wine);flex-shrink:0}
 .hero-signature p{font-size:.8rem;line-height:1.6;color:var(--muted)}
 .hero-signature strong{font-size:.875rem;color:var(--ink);font-weight:600}
@@ -137,6 +139,33 @@ h3{font-size:1.2rem;font-weight:600;letter-spacing:-.025em;line-height:1.4}
 .about-values{display:flex;flex-wrap:wrap;gap:11px 20px}
 .about-values li{font-size:.75rem;color:#57493e}
 .about-values li::before{content:'✓';margin-right:6px;color:var(--wine)}
+/* Modalità di collaborazione e domande frequenti */
+.pricing{background:var(--white);border-top:1px solid var(--line)}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.pricing-card{display:flex;flex-direction:column;align-items:flex-start;padding:30px 27px;border:1px solid var(--line);border-radius:5px;background:var(--paper);min-width:0}
+.pricing-card .eyebrow{margin-bottom:17px}
+.pricing-card h3{font-family:var(--serif);font-size:1.65rem;font-weight:400;letter-spacing:-.03em}
+.pricing-card>p:not(.eyebrow):not(.price){margin-top:13px;color:var(--muted);font-size:.9375rem;line-height:1.8}
+.price{font-family:var(--serif);font-size:2.4rem;line-height:1.2;letter-spacing:-.04em;color:var(--wine);margin-top:25px}
+.price-prefix,.price-unit{display:block;font-family:var(--sans);font-size:.875rem;font-weight:400;letter-spacing:0;line-height:1.6;color:var(--muted)}
+.price-prefix{margin-bottom:5px}
+.price-unit{margin-top:7px}
+.pricing-card .service-list{width:100%;padding-block:25px}
+.pricing-card .card-link{width:100%}
+.pricing-note{margin-top:25px;font-size:.875rem;line-height:1.8;color:var(--muted);max-width:850px}
+.faq{border-top:1px solid var(--line)}
+.faq-inner{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:85px;align-items:start}
+.faq-intro>p:not(.eyebrow){font-size:.9375rem;line-height:1.8;color:var(--muted);margin-top:23px;max-width:330px}
+.faq-intro .text-link{margin-top:18px;color:var(--wine)}
+.faq-list{border-top:1px solid var(--line);min-width:0}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 2px;min-height:64px;font-size:1rem;font-weight:600;line-height:1.6;list-style:none;cursor:pointer;text-wrap:pretty}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary>span{font-size:1.65rem;font-weight:400;line-height:1;color:var(--wine);flex-shrink:0;transition:transform .2s}
+.faq-item[open] summary>span{transform:rotate(45deg)}
+.faq-item summary:hover{color:var(--wine)}
+.faq-answer{padding:0 32px 25px 2px;color:var(--muted);font-size:.9375rem;line-height:1.85}
+.faq-answer p+p{margin-top:12px}
 .contact{background:var(--wine);color:var(--paper);text-align:center}
 .contact .eyebrow{color:#e9c9c6}
 .contact h2{font-size:clamp(3.2rem,5.6vw,5.2rem);margin-block:22px}
@@ -155,4 +184,7 @@ h3{font-size:1.2rem;font-weight:600;letter-spacing:-.025em;line-height:1.4}
 @media(max-width:1100px){.example-preview{padding:22px 20px}.example-body{padding:25px 22px}.about-inner{gap:50px}.tools{gap:25px}.steps-grid{gap:24px}.task-row{gap:8px;font-size:.75rem;padding-inline:10px}}
 @media(max-width:800px){.examples-grid{grid-template-columns:1fr;gap:22px}.example-preview{min-height:0;padding:25px}.example-body{padding:25px}.steps-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 28px;margin-top:35px}.step-number{margin-bottom:18px}.tools{flex-direction:column;gap:16px;margin-top:45px}.about{padding-block:60px}.about-inner{grid-template-columns:1fr;gap:34px}.about-signature{margin-top:28px}.about-copy blockquote{font-size:1.5rem}.task-row{font-size:.875rem}}
 @media(max-width:420px){.steps-grid{grid-template-columns:1fr;gap:28px}.steps-grid li{position:relative;padding:22px 0 0 49px}.step-number{position:absolute;top:22px;left:0;font-size:1.6rem}.steps-grid p{margin-top:8px}.example-preview{padding:20px 16px}.example-body{padding:23px 21px}.task-row{font-size:.75rem}.task-state{font-size:.75rem}.appointment{gap:10px;padding-inline:10px}.email-demo{padding:15px}.listing-demo{padding:17px}.listing-demo>strong{font-size:1.35rem}}
+@media(max-width:1100px){.pricing-card{padding:26px 22px}.faq-inner{gap:45px}.desktop-links{gap:18px;margin-right:0}}
+@media(min-width:801px) and (max-width:1000px){.navigation{flex-wrap:wrap;gap:12px 24px;padding-block:18px}.desktop-links{order:3;flex-basis:100%;justify-content:center;margin:0;gap:25px}.header-cta{margin-left:auto}html{scroll-padding-top:158px}}
+@media(max-width:800px){.pricing-grid{grid-template-columns:1fr;gap:16px}.pricing-card{padding:27px}.faq-inner{grid-template-columns:1fr;gap:32px}.faq-intro>p:not(.eyebrow){max-width:500px}.faq-item summary{padding-block:21px}.faq-answer{padding-right:16px}.mobile-links{max-height:calc(100dvh - 78px);overflow-y:auto;overscroll-behavior:contain}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
