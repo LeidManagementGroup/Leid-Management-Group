@@ -175,6 +175,7 @@ h3{font-size:1.2rem;font-weight:600;letter-spacing:-.025em;line-height:1.4}
 .button-light:hover{background:#eadccd;color:var(--wine-dark)}
 .contact a:focus-visible{outline-color:white}
 .contact-number{display:block;font-size:.875rem;color:#e9ceca;margin-top:16px;letter-spacing:.04em}
+.contact-instagram{margin-top:12px;min-height:44px}
 .site-footer{padding-block:34px;display:flex;justify-content:space-between;align-items:center;gap:25px}
 .site-footer p{font-size:.75rem;line-height:1.8;color:var(--muted)}
 @media(min-width:1600px){.hero{padding-block:90px 104px}.studio-image{height:555px}}
