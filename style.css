@@ -141,10 +141,14 @@ h3{font-size:1.2rem;font-weight:600;letter-spacing:-.025em;line-height:1.4}
 .about-values li::before{content:'✓';margin-right:6px;color:var(--wine)}
 /* Modalità di collaborazione e domande frequenti */
 .pricing{background:var(--white);border-top:1px solid var(--line)}
-.pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.pricing-group-heading{margin-bottom:24px}
+.pricing-group-heading h3{font-size:1.25rem}
+.pricing-group-heading p{margin-top:7px;font-size:.9375rem;color:var(--muted)}
+.pricing-monthly-heading{margin-top:48px}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .pricing-card{display:flex;flex-direction:column;align-items:flex-start;padding:30px 27px;border:1px solid var(--line);border-radius:5px;background:var(--paper);min-width:0}
 .pricing-card .eyebrow{margin-bottom:17px}
-.pricing-card h3{font-family:var(--serif);font-size:1.65rem;font-weight:400;letter-spacing:-.03em}
+.pricing-card h4{margin:0;font-family:var(--serif);font-size:1.65rem;font-weight:400;letter-spacing:-.03em;line-height:1.4}
 .pricing-card>p:not(.eyebrow):not(.price){margin-top:13px;color:var(--muted);font-size:.9375rem;line-height:1.8}
 .price{font-family:var(--serif);font-size:2.4rem;line-height:1.2;letter-spacing:-.04em;color:var(--wine);margin-top:25px}
 .price-prefix,.price-unit{display:block;font-family:var(--sans);font-size:.875rem;font-weight:400;letter-spacing:0;line-height:1.6;color:var(--muted)}
@@ -153,6 +157,7 @@ h3{font-size:1.2rem;font-weight:600;letter-spacing:-.025em;line-height:1.4}
 .pricing-card .service-list{width:100%;padding-block:25px}
 .pricing-card .card-link{width:100%}
 .pricing-note{margin-top:25px;font-size:.875rem;line-height:1.8;color:var(--muted);max-width:850px}
+.pricing-note .text-link{color:var(--wine);flex-wrap:wrap}
 .faq{border-top:1px solid var(--line)}
 .faq-inner{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:85px;align-items:start}
 .faq-intro>p:not(.eyebrow){font-size:.9375rem;line-height:1.8;color:var(--muted);margin-top:23px;max-width:330px}
@@ -174,8 +179,14 @@ h3{font-size:1.2rem;font-weight:600;letter-spacing:-.025em;line-height:1.4}
 .button-light{margin-top:30px;background:var(--paper);border-color:var(--paper);color:var(--wine)}
 .button-light:hover{background:#eadccd;color:var(--wine-dark)}
 .contact a:focus-visible{outline-color:white}
-.contact-number{display:block;font-size:.875rem;color:#e9ceca;margin-top:16px;letter-spacing:.04em}
-.contact-instagram{margin-top:12px;min-height:44px}
+.contact-number{display:block;width:fit-content;margin:12px auto 0;padding-block:10px;font-size:.875rem;color:#e9ceca;letter-spacing:.04em;text-underline-offset:4px}
+.contact-number:hover{text-decoration:underline}
+.contact-email{margin-top:12px}
+.contact-email span{display:block}
+.contact-email a{display:inline-block;max-width:100%;padding-block:10px;overflow-wrap:anywhere;text-decoration:underline;text-underline-offset:4px}
+.social-links{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:24px}
+.social-links a{display:inline-flex;align-items:center;justify-content:center;gap:16px;min-height:44px;padding:10px 18px;border:1px solid #c58e99;border-radius:4px;font-size:.875rem;font-weight:600}
+.social-links a:hover{background:var(--paper);color:var(--wine)}
 .site-footer{padding-block:34px;display:flex;justify-content:space-between;align-items:center;gap:25px}
 .site-footer p{font-size:.75rem;line-height:1.8;color:var(--muted)}
 @media(min-width:1600px){.hero{padding-block:90px 104px}.studio-image{height:555px}}
