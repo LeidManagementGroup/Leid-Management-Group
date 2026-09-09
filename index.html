@@ -274,9 +274,9 @@
         <p class="eyebrow">FACCIAMO IL PRIMO PASSO</p>
         <h2 id="contact-title">Da cosa vorresti<br><em>iniziare?</em></h2>
         <p>Scrivimi che attività hai e quale compito vorresti delegare.<br>Ti propongo le attività da svolgere e un preventivo prima di iniziare.</p>
-        <form id="contact-form" class="contact-form" action="https://wa.me/393520422507" method="get" target="_blank" rel="noopener noreferrer" aria-labelledby="contact-form-title" aria-describedby="contact-form-note">
+        <form id="contact-form" class="contact-form" aria-labelledby="contact-form-title" aria-describedby="contact-form-note">
           <h3 id="contact-form-title">Raccontami il tuo progetto</h3>
-          <p id="contact-form-note" class="contact-form-note">I campi con * sono obbligatori. Si apre WhatsApp con la richiesta pronta: il messaggio parte solo quando confermi l’invio.</p>
+          <p id="contact-form-note" class="contact-form-note">I campi con * sono obbligatori. La richiesta viene trasmessa per poterti ricontattare.</p>
           <p id="contact-form-fallback" class="contact-form-note">Per compilare il modulo serve JavaScript. Puoi sempre usare i contatti diretti qui sotto.</p>
           <fieldset id="contact-fields" disabled>
             <legend class="visually-hidden">Dati per la richiesta di preventivo</legend>
@@ -322,14 +322,18 @@
               <textarea id="contact-message" name="message" rows="5" required maxlength="1000" aria-describedby="contact-message-help"></textarea>
               <small id="contact-message-help">Quale attività vorresti delegare? Indica anche eventuali scadenze. Non inserire password o dati riservati.</small>
             </div>
+            <div class="contact-field-honeypot" aria-hidden="true">
+              <label for="contact-website">Sito web</label>
+              <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
             <div class="contact-field-wide contact-form-actions">
-              <button type="submit" class="button">Continua su WhatsApp <span aria-hidden="true">↗</span></button>
-              <p class="contact-form-note">I dati vengono aggiunti alla richiesta su WhatsApp. Non vengono salvati dal sito.</p>
+              <button type="submit" class="button">Invia la richiesta <span aria-hidden="true">↗</span></button>
+              <p class="contact-form-note">I dati vengono trasmessi tramite Make e Airtable per poter rispondere alla richiesta.</p>
             </div>
           </fieldset>
           <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
           <div id="contact-form-result" class="contact-form-result" hidden>
-            <a id="contact-request-link" class="text-link" target="_blank" rel="noopener noreferrer">Apri la richiesta su WhatsApp <span aria-hidden="true">↗</span></a>
+            <a id="contact-request-link" class="text-link" target="_blank" rel="noopener noreferrer">Contattami su WhatsApp <span aria-hidden="true">↗</span></a>
             <a id="contact-email-link" class="text-link">Prepara invece un’email <span aria-hidden="true">↗</span></a>
           </div>
         </form>

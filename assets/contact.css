@@ -12,6 +12,7 @@
 .contact-field input:focus-visible,.contact-field select:focus-visible,.contact-field textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-color:var(--accent)}
 .contact-field [aria-invalid=true]{border-color:var(--accent)}
 .contact-field small{font-size:.8125rem;line-height:1.7;color:var(--muted)}
+.contact-field-honeypot{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .contact-form-actions .button{width:100%;min-height:54px;gap:14px;padding-inline:16px}
 .contact-form-actions .contact-form-note{margin-top:12px}
 .contact-form fieldset:disabled{opacity:.65}
