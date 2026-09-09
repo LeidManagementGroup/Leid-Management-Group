@@ -59,7 +59,7 @@
   function showManualFallback(data) {
     const message = manualMessage(data);
     whatsappLink.href = 'https://wa.me/393520422507?text=' + encodeURIComponent(message);
-    emailLink.href = 'mailto:leidmanagementgroup@gmail.com?subject=' + encodeURIComponent('Richiesta di preventivo — ' + data.service) + '&body=' + encodeURIComponent(message);
+    emailLink.href = 'mailto:info@leidmanagementgroup.it?subject=' + encodeURIComponent('Richiesta di preventivo — ' + data.service) + '&body=' + encodeURIComponent(message);
     result.hidden = false;
   }
 
