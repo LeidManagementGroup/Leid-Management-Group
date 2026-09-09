@@ -7,11 +7,29 @@
   <meta name="description" content="Sono Eric, il tuo assistente virtuale. Email, clienti, appuntamenti, contenuti e social: un supporto personale per professionisti, attività locali e agenzie immobiliari.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#772638">
+  <link rel="canonical" href="https://leidmanagementgroup.github.io/Leid-Management-Group/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Leid Management Group">
+  <meta property="og:title" content="Leid Management Group | Assistenza virtuale e supporto digitale">
+  <meta property="og:description" content="Email, clienti, appuntamenti, contenuti e social: un supporto personale per professionisti, attività locali e agenzie immobiliari. Scopri i servizi e richiedi un preventivo.">
+  <meta property="og:url" content="https://leidmanagementgroup.github.io/Leid-Management-Group/">
+  <meta property="og:image" content="https://leidmanagementgroup.github.io/Leid-Management-Group/assets/studio.jpg">
+  <meta property="og:image:width" content="1448">
+  <meta property="og:image:height" content="1086">
+  <meta property="og:image:alt" content="Una scrivania luminosa con un portatile, un quaderno bordeaux e una tazza di caffè">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Leid Management Group | Assistenza virtuale e supporto digitale">
+  <meta name="twitter:description" content="Supporto personale per email, clienti, appuntamenti, contenuti e social. Scopri i servizi e richiedi un preventivo.">
+  <meta name="twitter:image" content="https://leidmanagementgroup.github.io/Leid-Management-Group/assets/studio.jpg">
+  <meta name="twitter:image:alt" content="Portatile e quaderno bordeaux su una scrivania luminosa">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="assets/lead-workflow.css">
   <link rel="stylesheet" href="assets/motion.css">
+  <link rel="stylesheet" href="assets/contact.css">
   <script src="assets/motion.js" defer></script>
+  <script src="assets/contact.js" defer></script>
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
@@ -20,7 +38,7 @@
     <nav class="container navigation" aria-label="Navigazione principale">
       <a class="brand" href="#home" aria-label="Leid Management Group — Home"><span class="brand-name">leid<span class="brand-dot">.</span></span><span class="brand-descriptor">MANAGEMENT<br>GROUP</span></a>
       <div class="desktop-links"><a href="#services">Servizi</a><a href="#pricing">Prezzi</a><a href="#portfolio">Esempi</a><a href="#about">Chi sono</a><a href="#faq">FAQ</a></div>
-      <a class="button button-small header-cta" href="#contact">Parliamone <span aria-hidden="true">↗</span></a>
+      <a class="button button-small header-cta" href="#contact">Richiedi un preventivo <span aria-hidden="true">↗</span></a>
       <details class="mobile-menu">
         <summary>Menu <span class="menu-icon" aria-hidden="true"></span></summary>
         <div class="mobile-links"><a href="#services">Servizi</a><a href="#pricing">Prezzi e collaborazione</a><a href="#portfolio">Esempi di lavoro</a><a href="#how-i-work">Come lavoro</a><a href="#about">Chi sono</a><a href="#faq">Domande frequenti</a><a href="#contact">Contatti ↗</a></div>
@@ -256,6 +274,65 @@
         <p class="eyebrow">FACCIAMO IL PRIMO PASSO</p>
         <h2 id="contact-title">Da cosa vorresti<br><em>iniziare?</em></h2>
         <p>Scrivimi che attività hai e quale compito vorresti delegare.<br>Ti propongo le attività da svolgere e un preventivo prima di iniziare.</p>
+        <form id="contact-form" class="contact-form" action="https://wa.me/393520422507" method="get" target="_blank" rel="noopener noreferrer" aria-labelledby="contact-form-title" aria-describedby="contact-form-note">
+          <h3 id="contact-form-title">Raccontami il tuo progetto</h3>
+          <p id="contact-form-note" class="contact-form-note">I campi con * sono obbligatori. Si apre WhatsApp con la richiesta pronta: il messaggio parte solo quando confermi l’invio.</p>
+          <p id="contact-form-fallback" class="contact-form-note">Per compilare il modulo serve JavaScript. Puoi sempre usare i contatti diretti qui sotto.</p>
+          <fieldset id="contact-fields" disabled>
+            <legend class="visually-hidden">Dati per la richiesta di preventivo</legend>
+            <div class="contact-field">
+              <label for="contact-name">Nome *</label>
+              <input id="contact-name" name="name" autocomplete="name" required maxlength="80">
+            </div>
+            <div class="contact-field">
+              <label for="contact-company">Azienda <span>(facoltativo)</span></label>
+              <input id="contact-company" name="company" autocomplete="organization" maxlength="120">
+            </div>
+            <div class="contact-field">
+              <label for="contact-email">Email *</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required maxlength="254" spellcheck="false" autocapitalize="none">
+            </div>
+            <div class="contact-field">
+              <label for="contact-phone">Telefono <span>(facoltativo)</span></label>
+              <input id="contact-phone" name="phone" type="tel" autocomplete="tel" maxlength="30">
+            </div>
+            <div class="contact-field contact-field-wide">
+              <label for="contact-service">Servizio richiesto *</label>
+              <select id="contact-service" name="service" required>
+                <option value="">Scegli un servizio</option>
+                <optgroup label="Supporto e progetti su misura">
+                  <option>Clienti e organizzazione</option>
+                  <option>Testi e contenuti</option>
+                  <option>Social e contatti</option>
+                  <option>Automazioni su preventivo</option>
+                </optgroup>
+                <optgroup label="Pacchetti e abbonamenti">
+                  <option>Testo pronto</option>
+                  <option>Profilo in ordine</option>
+                  <option>Aiuto operativo</option>
+                  <option>Assistente Start</option>
+                  <option>Social Start</option>
+                  <option>Social + Supporto</option>
+                </optgroup>
+                <option>Vorrei un consiglio per scegliere</option>
+              </select>
+            </div>
+            <div class="contact-field contact-field-wide">
+              <label for="contact-message">Messaggio *</label>
+              <textarea id="contact-message" name="message" rows="5" required maxlength="1000" aria-describedby="contact-message-help"></textarea>
+              <small id="contact-message-help">Quale attività vorresti delegare? Indica anche eventuali scadenze. Non inserire password o dati riservati.</small>
+            </div>
+            <div class="contact-field-wide contact-form-actions">
+              <button type="submit" class="button">Continua su WhatsApp <span aria-hidden="true">↗</span></button>
+              <p class="contact-form-note">I dati vengono aggiunti alla richiesta su WhatsApp. Non vengono salvati dal sito.</p>
+            </div>
+          </fieldset>
+          <p id="contact-form-status" class="contact-form-status" role="status" aria-live="polite" aria-atomic="true"></p>
+          <div id="contact-form-result" class="contact-form-result" hidden>
+            <a id="contact-request-link" class="text-link" target="_blank" rel="noopener noreferrer">Apri la richiesta su WhatsApp <span aria-hidden="true">↗</span></a>
+            <a id="contact-email-link" class="text-link">Prepara invece un’email <span aria-hidden="true">↗</span></a>
+          </div>
+        </form>
         <a class="button button-light" href="https://wa.me/393520422507?text=Ciao%20Eric%2C%20vorrei%20ricevere%20informazioni%20sui%20tuoi%20servizi%20di%20assistenza%20virtuale." target="_blank" rel="noopener noreferrer">Scrivimi su WhatsApp <span aria-hidden="true">↗</span></a>
         <a class="contact-number" href="tel:+393520422507">+39 352 042 2507</a>
         <p class="contact-email"><span>Preferisci l’email?</span><a href="mailto:leidmanagementgroup@gmail.com?subject=Informazioni%20sul%20supporto%20per%20la%20mia%20attivit%C3%A0">leidmanagementgroup@gmail.com</a></p>
