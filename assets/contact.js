@@ -45,11 +45,33 @@
     return null;
   }
 
+  function cleanAttribution(value, maxLength) {
+    return String(value || '').replace(/[\u0000-\u001f\u007f]/g, '').trim().slice(0, maxLength);
+  }
+
+  function getProvenance() {
+    const params = new URLSearchParams(window.location.search);
+    const parts = ['utm_source', 'utm_medium', 'utm_campaign']
+      .map(key => [key, cleanAttribution(params.get(key), 120)])
+      .filter(([, value]) => value)
+      .map(([key, value]) => key + '=' + value);
+    if (document.referrer) {
+      try {
+        const referrer = new URL(document.referrer);
+        const path = referrer.pathname === '/' ? '' : referrer.pathname;
+        const safeReferrer = cleanAttribution(referrer.hostname + path, 200);
+        if (safeReferrer) parts.push('referrer=' + safeReferrer);
+      } catch { /* Referrer non valido: ignora. */ }
+    }
+    return parts.join('; ');
+  }
+
   function manualMessage(data) {
     return [
       'Ciao Eric, vorrei un preventivo per la mia attività.', '',
       'Nome: ' + data.name,
       ...(data.company ? ['Azienda: ' + data.company] : []),
+      ...(data.business_type ? ['Tipo di attività: ' + data.business_type] : []),
       'Email: ' + data.email,
       ...(data.phone ? ['Telefono: ' + data.phone] : []),
       'Servizio richiesto: ' + data.service, '', 'Messaggio:', data.message
@@ -84,9 +106,10 @@
     }
     if (!form.reportValidity()) return;
 
-    const submissionKey = JSON.stringify({ name: data.name, company: data.company, email: data.email, phone: data.phone, service: data.service, message: data.message, website: data.website });
+    const provenienza = getProvenance();
+    const submissionKey = JSON.stringify({ name: data.name, company: data.company, business_type: data.business_type, email: data.email, phone: data.phone, service: data.service, message: data.message, website: data.website, provenienza });
     const leadId = submissionCache && submissionCache.key === submissionKey ? submissionCache.leadId : makeLeadId();
-    const payload = new URLSearchParams({ lead_id: leadId, nome: data.name, azienda: data.company, email: data.email, telefono: data.phone, servizio: data.service, note: data.message, fonte: 'Sito', social: '', website: data.website });
+    const payload = new URLSearchParams({ lead_id: leadId, nome: data.name, azienda: data.company, tipo_attivita: data.business_type, email: data.email, telefono: data.phone, servizio: data.service, note: data.message, fonte: 'Sito', provenienza, social: '', website: data.website });
 
     pending = true;
     form.setAttribute('aria-busy', 'true');
