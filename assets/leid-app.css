@@ -1,0 +1,47 @@
+/* Leid App: stili limitati alla nuova sezione, con i colori del sito. */
+.desktop-links{gap:24px;margin-right:8px;white-space:nowrap}
+.leid-app{background:radial-gradient(ellipse at 85% 45%,#77263830,transparent 55%),var(--paper)}
+.leid-app__layout{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:72px;align-items:center}
+.leid-app__copy{min-width:0}
+.leid-app__copy h2{max-width:600px;margin:22px 0 24px;font-size:clamp(2.75rem,4.7vw,4.2rem);line-height:1.08}
+.leid-app__copy h2>span,.leid-app__copy h2>em{display:block}
+.leid-app__intro{max-width:540px;color:var(--muted);font-size:1rem;line-height:1.85}
+.leid-app__tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 28px;margin:32px 0}
+.leid-app__tools li{display:flex;align-items:flex-start;gap:12px;min-width:0}
+.leid-app__icon{display:grid;place-items:center;flex:0 0 38px;height:38px;border:1px solid var(--line);border-radius:9px;background:#77263826;color:var(--accent)}
+.leid-app__icon svg{width:23px;height:23px}
+.leid-app__tools h3{font-size:.9375rem;font-weight:600;line-height:1.5;margin:0 0 5px}
+.leid-app__tools p{font-size:.8125rem;color:var(--muted);line-height:1.7}
+.leid-app__cta{min-width:200px;justify-content:space-between}
+.leid-app__note{margin-top:12px;font-size:.8125rem;color:var(--muted)}
+.leid-app__preview{min-width:0;text-align:center}
+.leid-app__stage{position:relative;isolation:isolate;display:grid;place-items:center;padding:26px 0}
+.leid-app__stage::before{content:'';position:absolute;width:100%;max-width:420px;aspect-ratio:1;border:1px solid #bb3e4a38;border-radius:50%;background:radial-gradient(circle,#77263850,transparent 70%);z-index:-1}
+.leid-app__stage::after{content:'';position:absolute;width:82%;max-width:340px;aspect-ratio:1;border:1px solid #bb3e4a24;border-radius:50%;z-index:-1}
+.leid-app__phone{width:286px;max-width:90%;padding:9px;border:1px solid #a7747c;border-radius:36px;background:#200d11;box-shadow:0 30px 65px #0006,0 0 0 4px #7726381a}
+.leid-app__phone img{width:100%;height:auto;border-radius:27px;background:#faf7f2}
+.leid-app__preview figcaption{margin-top:8px;font-size:.75rem;line-height:1.8;color:var(--accent)}
+.leid-app__preview figcaption span{color:var(--muted)}
+.leid-app__sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+@media(max-width:1100px){
+  .desktop-links{gap:18px;margin-right:0}
+  .leid-app__layout{gap:36px;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)}
+  .leid-app__tools{gap:22px 18px}
+}
+@media(min-width:801px) and (max-width:1000px){.desktop-links{gap:25px}}
+@media(max-width:800px){
+  .leid-app__layout{grid-template-columns:1fr;gap:30px}
+  .leid-app__copy h2{max-width:550px;font-size:clamp(2.5rem,7vw,3.5rem)}
+  .leid-app__intro{max-width:560px}
+  .leid-app__tools{max-width:560px;gap:24px}
+  .leid-app__preview{width:min(100%,420px);justify-self:center}
+  .leid-app__stage{padding-block:20px}
+  .leid-app__phone{width:276px}
+}
+@media(max-width:420px){
+  .leid-app__tools{gap:24px 16px}
+  .leid-app__tools li{display:block}
+  .leid-app__icon{width:38px;margin-bottom:10px}
+  .leid-app__cta{width:100%;justify-content:center}
+  .leid-app__note{max-width:270px}
+}
