@@ -1,0 +1,19 @@
+/* Scelta dei servizi: stessi colori e componenti del sito. */
+#pricing-filters{margin:0 0 30px;padding:22px 24px;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+#pricing-filters[hidden],.pricing-card[hidden],.pricing-group[hidden]{display:none!important}
+#pricing-filters p:first-child{margin:0 0 12px;font-size:.9375rem;font-weight:600;color:var(--ink)}
+#pricing-filters button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;margin:0 6px 8px 0;padding:10px 17px;border:1px solid var(--line);border-radius:50px;background:var(--paper);color:var(--ink);font:inherit;font-size:.875rem;line-height:1.5;cursor:pointer}
+#pricing-filters button:hover{border-color:var(--accent)}
+#pricing-filters button[aria-pressed=true]{border-color:var(--accent);background:var(--accent);color:var(--paper);font-weight:650}
+#pricing-filters button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+#pricing-filter-status{margin-top:2px;color:var(--muted);font-size:.8125rem;line-height:1.7}
+.pricing-card.is-service-selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.pricing-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.pricing-card{max-width:600px}
+.pricing-card .pricing-select{width:100%;margin-top:auto}
+.pricing-card .pricing-whatsapp{display:inline-flex;align-items:center;gap:8px;min-height:44px;margin-top:8px;padding-block:8px;color:var(--accent);font-size:.8125rem;line-height:1.6;text-underline-offset:4px}
+.pricing-card .pricing-whatsapp:hover{text-decoration:underline}
+#contact-selection{margin-top:18px;padding:12px 14px;border-left:3px solid var(--accent);border-radius:0 6px 6px 0;background:var(--paper);color:var(--ink);font-size:.875rem;line-height:1.7}
+#contact-selection[hidden]{display:none}
+#contact-form:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+@media(max-width:600px){#pricing-filters{padding:20px 18px}#pricing-filters button{margin-right:4px;padding-inline:14px}.pricing-card .pricing-whatsapp{font-size:.875rem}}

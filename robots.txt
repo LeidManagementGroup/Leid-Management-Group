@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leidmanagementgroup.it/sitemap.xml
